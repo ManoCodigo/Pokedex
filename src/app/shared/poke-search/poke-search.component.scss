@@ -1,0 +1,23 @@
+@import '../../../sass/mixin.scss';
+
+:host {
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: rem(15);
+    border-radius: var(--radius);
+
+    input {
+      width: 100%;
+      background-color: transparent;
+      color: var(--branco);
+      font-size: rem(18);
+    }
+
+    i {
+      color: var(--branco);
+    }
+  }
+}
