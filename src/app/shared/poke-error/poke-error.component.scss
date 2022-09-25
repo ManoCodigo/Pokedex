@@ -1,0 +1,52 @@
+@import '../../../sass/mixin.scss';
+
+.container-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+
+  a {
+    width: 100%;
+    text-align: center;
+    padding: rem(15);
+    margin-top: rem(10);
+    background-color: #EFB535;
+    color: var(--branco);
+    border-radius: var(--radius);
+    transition: 0.5s;
+
+    &:hover {
+      transform: translateY(rem(-5));
+    }
+  }
+
+  .error {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+
+    img {
+      width: 40%;
+    }
+
+    &__name {
+      width: 50%;
+
+      h2 {
+        font-size: rem(45);
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.719);
+      }
+      h3 {
+        text-align: end;
+        font-size: rem(25);
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.719);
+      }
+    }
+  }
+}

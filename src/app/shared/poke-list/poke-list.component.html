@@ -1,8 +1,15 @@
-<div class="search">
+
+<ng-template [ngIf]="!loading">
+  <poke-error *ngIf="error"></poke-error>
+  <poke-loading *ngIf="!error"></poke-loading>
+</ng-template>
+
+<ng-template [ngIf]="loading">
+<div class="search fadeInUp">
   <poke-search (emitSearch)="getSearch($event)"></poke-search>
 </div>
 
-<div class="listagem">
+<div class="listagem fadeInUp">
   <a (click)="navDetails(item.status?.id)" class="pokemon"
   *ngFor="let item of listAllPokemon">
     <div class="pokemon__status">
@@ -21,4 +28,4 @@
     </div>
   </a>
 </div>
-
+</ng-template>

@@ -1,0 +1,23 @@
+@import '../../../sass/mixin.scss';
+
+div {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: rem(100);
+    animation: 0.7s loandigPokeboll infinite;
+  }
+}
+
+@keyframes loandigPokeboll {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(350deg);
+  }
+}

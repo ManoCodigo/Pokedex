@@ -22,7 +22,9 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     PagesRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+  ],
+  exports: [
   ],
   providers: [],
   bootstrap: [AppComponent]

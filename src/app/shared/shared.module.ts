@@ -2,29 +2,38 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // Modules
+import { RouterModule } from '@angular/router';
 
 // Components
 import { PokeNavComponent } from './poke-nav/poke-nav.component';
 import { PokeSearchComponent } from './poke-search/poke-search.component';
 import { PokeListComponent } from './poke-list/poke-list.component';
-import { RouterModule } from '@angular/router';
-
+import { PokeLoadingComponent } from './poke-loading/poke-loading.component';
+import { PokeErrorComponent } from './poke-error/poke-error.component';
+import { PokeFooterComponent } from './poke-footer/poke-footer.component';
 
 
 @NgModule({
   declarations: [
     PokeNavComponent,
     PokeSearchComponent,
-    PokeListComponent
+    PokeListComponent,
+    PokeLoadingComponent,
+    PokeErrorComponent,
+    PokeFooterComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+
   ],
   exports: [
+    RouterModule,
     PokeNavComponent,
     PokeSearchComponent,
     PokeListComponent,
-    RouterModule
-  ]
+    PokeLoadingComponent,
+    PokeErrorComponent,
+    PokeFooterComponent
+  ],
 })
 export class SharedModule { }

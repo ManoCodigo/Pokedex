@@ -13,13 +13,15 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
     SharedModule,
     RouterModule
+  ],
+  exports: [
   ]
 })
 export class PagesModule { }

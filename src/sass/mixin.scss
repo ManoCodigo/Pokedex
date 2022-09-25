@@ -1,6 +1,6 @@
 
 // Conversor de PX para REM
 @function rem($size) {
-  $value: $size / 16;
+  $value: calc($size / 16);
   @return #{$value}rem;
 }
