@@ -20,6 +20,17 @@
     border-radius: var(--radius);
     cursor: pointer;
 
+    @include response(600px) {
+      width: 100%;
+      margin-bottom: rem(26);
+    }
+    @include response(300px) {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: rem(307);
+    }
+
     &:hover img {
       transform: translateY(rem(-20));
 
@@ -58,10 +69,10 @@
     }
 
     &__image {
+      width: 50%;
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      width: 50%;
       background-image: url(../../../assets/images/bg-pokemon-list.svg);
       background-size: contain;
       background-position: bottom;
@@ -72,6 +83,18 @@
         padding-bottom: rem(5);
         transition: 0.5s;
 
+        @include response(600px) {
+          width: 100px;
+          padding-bottom: rem(0);
+        }
+        @include response(300px) {
+          width: 150px;
+        }
+      }
+
+      @include response(300px) {
+        align-self: flex-end;
+        padding: rem(10);
       }
     }
   }
