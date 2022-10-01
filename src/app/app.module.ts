@@ -23,6 +23,7 @@ import { RouterModule } from '@angular/router';
     PagesRoutingModule,
     HttpClientModule,
     RouterModule,
+
   ],
   exports: [
   ],

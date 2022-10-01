@@ -5,11 +5,11 @@
 </ng-template>
 
 <ng-template [ngIf]="loading">
-<div class="search fadeInUp">
+<div class="search fadeIn">
   <poke-search (emitSearch)="getSearch($event)"></poke-search>
 </div>
 
-<div class="listagem fadeInUp">
+<div class="listagem" [ngClass]="direction">
   <a (click)="navDetails(item.status?.id)" class="pokemon"
   *ngFor="let item of listAllPokemon">
     <div class="pokemon__status">
@@ -29,3 +29,11 @@
   </a>
 </div>
 </ng-template>
+<div>
+  <mat-paginator
+  [length]="800"
+  [pageSize]="20"
+  (page)="chancePage($event)">
+</mat-paginator>
+</div>
+

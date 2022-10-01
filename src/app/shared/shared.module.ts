@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 // Modules
 import { RouterModule } from '@angular/router';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 // Components
 import { PokeNavComponent } from './poke-nav/poke-nav.component';
@@ -24,7 +27,9 @@ import { PokeFooterComponent } from './poke-footer/poke-footer.component';
   ],
   imports: [
     CommonModule,
-
+    NzPaginationModule,
+    PaginationModule,
+    MatPaginatorModule
   ],
   exports: [
     RouterModule,
@@ -33,7 +38,8 @@ import { PokeFooterComponent } from './poke-footer/poke-footer.component';
     PokeListComponent,
     PokeLoadingComponent,
     PokeErrorComponent,
-    PokeFooterComponent
+    PokeFooterComponent,
+
   ],
 })
 export class SharedModule { }
