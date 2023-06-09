@@ -82,7 +82,6 @@ export class PokeListComponent implements OnInit, OnDestroy {
     this.router.navigate(['details', id])
   }
 
-  //ATC! Duvida no entendimento do filtro voltar ao valor antes da pesquisa. Hands On 12
   public getSearch(value: any) {
     const filter = this.setAllPokemon.filter( (res: any) => {
       return !res.name.indexOf(value.toLowerCase())
